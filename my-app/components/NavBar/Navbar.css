@@ -1,0 +1,101 @@
+.nav-main {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 3%;
+    background: #fff;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 100%;
+    top: 0px;
+    /* transform: translateY(100px); */
+}
+
+.nav-main-hide{
+    transform: translateY(-100px);
+}
+
+.incubator-logo {
+    /* display: inline-block; */
+    width: 15%;
+}
+
+.nav-btns {
+    display: flex;
+    /* justify-content: center; */
+    gap: 30px;
+    align-items: center;
+    width: fit-content;
+    /* outline: 1px solid red; */
+    padding: 5px;
+    position: relative;
+}
+
+.nav-slider{
+    position: absolute;
+    /* top: 0; */
+    height: 70%;
+    /* outline: 1px solid blue; */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-btns>a {
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.25s linear, opacity 0.25s ease;
+    /* outline: 1px solid red; */
+}
+
+.nav-btns:hover a:not(:hover){
+    opacity: 0.5;
+}
+
+.nav-btns>a:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(10px);
+    height: 2px;
+    top: -3px;
+    left: 0;
+    background-color: rgba(67, 137, 250, 255);
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.nav-link:hover::before {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(-10px);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: rgba(67, 137, 250, 255);
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.nav-link:hover::after {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+}
+
+.hamburger{
+    display: none;
+    /* outline: 1px solid red; */
+}

@@ -1,0 +1,152 @@
+
+
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    justify-content:center;
+    padding-bottom: 5%;
+
+}
+
+.cardT{
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    margin: 0 100px;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.cardT:hover{
+    transform: translate(20px);
+}
+
+.cardT:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    display:block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgb(188, 193, 228));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.cardT:hover::before{
+    opacity:1;
+}
+
+.cardT img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cardT .infoT{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translate(30px);
+    transition: 0.5s all;
+}
+
+.cardT:hover .infoT{
+    opacity: 1;
+    transform: translate(0px);
+}
+
+.cardT .infoT h1{
+    margin: 0;
+}
+
+.cardT .infoT p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.cardT .infoT .btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.btn {
+    transform: translate(-50%,-50%);
+}
+
+.cardT .infoT .btn:hover{
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+/*  */
+
+#popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    z-index: 1000;
+}
+
+#popup .popup-content{
+    position: absolute;
+    z-index: 400;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 10px 20px;
+    background: linear-gradient(to left, rgba(95, 107, 175, 1), rgb(188, 193, 228));
+}
+
+#popup a.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+#popup:target {
+    display: block;
+}
+
+.image{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    
+}
+
+.teamname{
+    display: flex;
+    text-align: center;
+}
+
